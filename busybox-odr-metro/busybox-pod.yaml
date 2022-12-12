@@ -19,5 +19,10 @@ spec:
       persistentVolumeClaim:
         claimName: busybox-pvc
         readOnly: false
+  #securityContext:
+  #  privileged: true
   securityContext:
-    privileged: true
+    runAsNonRoot: true
+    runAsUser: 3124
+    seccompProfile:
+      type: RuntimeDefault
