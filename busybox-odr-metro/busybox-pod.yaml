@@ -13,12 +13,13 @@ spec:
       imagePullPolicy: IfNotPresent
       #command: ['sh', '-c', 'while true; do echo $(date) | tee -a /mnt/test/outfile; sync; sleep 1; done']
       env:
-        - name: POSTGRESQL_DATABASE
-          value: postgresdb
-        - name: POSTGRESQL_USER
-          value: admin
-        - name: POSTGRESQL_PASSWORD
-          value: psltest
+        - name: POSTGRESQL_DATABASE
+          value: postgresdb
+        - name: POSTGRESQL_USER
+          value: admin
+        - name: POSTGRESQL_PASSWORD
+          value: psltest
+
       volumeMounts:
         - name: mypvc
           mountPath: /mnt/test
